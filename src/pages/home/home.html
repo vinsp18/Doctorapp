@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Update your Basic Information</ion-title>
+     <!-- <ion-icon name="arrow-back" (click)="mg()" class= "mr-1"></ion-icon>
+     <ion-icon name="arrow-forward" (click)="cg()"class="floatArrow"></ion-icon>  -->
+    <ion-icon ios="ios-refresh"(click)="gf()" class="float-right" md="md-refresh"></ion-icon>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>Full Name</ion-label>
+      <ion-input type="text" [(ngModel)]="fullName"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label floating>Age</ion-label>
+      <ion-input type="number"[(ngModel)]="Age" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Height(cms)</ion-label>
+      <ion-input type="number"[(ngModel)]="Height"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label floating>Temperature</ion-label>
+      <ion-input type="number"[(ngModel)]="Temperature"></ion-input>
+    </ion-item>
+      <ion-item>
+        <ion-label Padding-top>Start Date</ion-label>
+        <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="StartDate"></ion-datetime>
+      </ion-item> 
+  </ion-list>
+  <ion-item>
+    <ion-label>Gender</ion-label>
+    <ion-select [(ngModel)]="gender" (change)="onChange(gender)">
+      <ion-option value="Female">Female</ion-option>
+      <ion-option value="Male">Male</ion-option>
+    </ion-select>
+  </ion-item>
+  <button ion-button (click)="save(fullName,Age,Height,Temperature,StartDate,gender)" color="dark" outline >Submit</button>
+
+</ion-content>
